@@ -23,8 +23,8 @@ return [
     'callback_url' => env('APP_URL', false),
 
     'mailgun'  => [
-        'domain' => '',
-        'secret' => '',
+        'domain' => env('MAILGUN_DOMAIN', ''),
+        'secret' => env('MAILGUN_SECRET', ''),
     ],
 
     'mandrill' => [
@@ -89,8 +89,8 @@ return [
     'okta' => [
         'client_id' => env('OKTA_APP_ID'),
         'client_secret' => env('OKTA_APP_SECRET'),
-        'redirect' => env('APP_URL') . '/login/service/okta/callback', 
-        'base_url' => env('OKTA_BASE_URL'), 
+        'redirect' => env('APP_URL') . '/login/service/okta/callback',
+        'base_url' => env('OKTA_BASE_URL'),
         'name'          => 'Okta',
     ],
 
